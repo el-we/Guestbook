@@ -1,0 +1,10 @@
+{
+  "name": "05",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  }
+}

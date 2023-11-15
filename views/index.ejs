@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- CSS path has to be relative to the directory set by express.static() -->
+        <link rel="stylesheet" type="text/css" href="./css/app.css">
+        <title>Index</title>
+    </head>
+    <body>
+        <% for(let entry of entries) { %>
+            <div class="entry">
+                <h3><%= entry.title %></h3>
+                <p><%= entry.content %></p>
+            </div>
+        <% } %>
+
+        <form class="new-entry" method="post" action="/guestbook/new">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" />
+            <br />
+            <label for="content">Content:</label> <br />
+            <textarea name="content" id="content"></textarea>
+            <br />
+            <button type="submit">Submit</button>
+        </form>
+
+        <script type="text/javascript" src="./js/jquery-3.7.1.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </body>
+
+</html>
